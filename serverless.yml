@@ -19,10 +19,24 @@ provider:
   region: ap-southeast-1
   environment: ${file(env.yml):${self:provider.stage}}
 
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource: "arn:aws:dynamodb:ap-southeast-1:*:*"
+
 functions:
-  hello:
-    handler: handler.hello
+  account-create:
+    handler: functions/account/create.main
     events:
       - http:
-          path: hello
-          method: get
+          path: account
+          method: post
+          cors: true
+          authorizer: aws_iam
