@@ -40,3 +40,12 @@ functions:
           method: post
           cors: true
           authorizer: aws_iam
+
+  account-list:
+    handler: functions/account/list.main
+    events:
+      - http:
+          path: accounts
+          method: get
+          cors: true
+          authorizer: aws_iam
