@@ -49,3 +49,12 @@ functions:
           method: get
           cors: true
           authorizer: aws_iam
+
+  account-get:
+    handler: functions/account/get.main
+    events:
+      - http:
+          path: accounts/{id}
+          method: get
+          cors: true
+          authorizer: aws_iam
