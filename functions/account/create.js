@@ -21,6 +21,7 @@ export async function main(event, context, callback) {
       userId: event.requestContext.identity.cognitoIdentityId,
       accountId: `${data.currency}_${dynamoDbLib.randomString()}`,
       accountName: data.accountName,
+      initialBalance: data.initialBalance,
       currency: data.currency,
       openDate: Date.now(),
       color: data.color ? data.color : 'default',

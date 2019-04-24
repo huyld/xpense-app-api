@@ -20,9 +20,11 @@ export async function main(event, context) {
       userId: event.requestContext.identity.cognitoIdentityId,
       accountId: event.pathParameters.id
     },
-    UpdateExpression: 'SET accountName = :accountName, color = :color',
+    UpdateExpression:
+      'SET accountName = :accountName, initialBalance = :initialBalance, color = :color',
     ExpressionAttributeValues: {
-      ':accountName': data.accountName || null,
+      ':accountName': data.accountName || '',
+      ':initialBalance': data.initialBalance || 0,
       ':color': data.color || null
     },
     ReturnValues: 'ALL_NEW'
@@ -35,6 +37,7 @@ export async function main(event, context) {
       data: result,
     });
   } catch (e) {
+    console.error('Update account exception', e);
     return failure({
       status: false,
       data: e,
