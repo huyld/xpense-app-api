@@ -1,0 +1,276 @@
+[
+  {
+    "name": "General",
+    "isExpense": "true",
+    "color": "star"
+  },
+  {
+    "name": "Car",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "directions_car",
+    "subCategories": [
+      "Fuel",
+      "Insurance",
+      "Maintenance",
+      "Parking",
+      "Washing"
+    ]
+  },
+  {
+    "name": "Clothing",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "star",
+    "subCategories": [
+      "Accessories",
+      "Bags",
+      "Pants",
+      "Shoes",
+      "Tops"
+    ]
+  },
+  {
+    "name": "Drinks",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "local_bar",
+    "subCategories": [
+      "Alcohol",
+      "Beer",
+      "Coffee",
+      "Juice",
+      "Soft Drinks",
+      "Tea"
+    ]
+  },
+  {
+    "name": "Education",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "school",
+    "subCategories": [
+      "Books",
+      "School Supplies",
+      "Tuition"
+    ]
+  },
+  {
+    "name": "Entertainment",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "videogame_asset",
+    "subCategories": [
+      "Games",
+      "Hangout",
+      "Movies",
+      "Music",
+      "Party",
+      "Performance"
+    ]
+  },
+  {
+    "name": "Finance",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "attach_money",
+    "subCategories": [
+      "Banking",
+      "Debt Repayment",
+      "Exchange",
+      "Insurance",
+      "Lending",
+      "Pension Funds",
+      "Saving",
+      "Tax"
+    ]
+  },
+  {
+    "name": "Food",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "restaurant",
+    "subCategories": [
+      "Breakfast",
+      "Dining Out",
+      "Dinner",
+      "Groceries",
+      "Lunch",
+      "Snack"
+    ]
+  },
+  {
+    "name": "Gifts",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "card_giftcard",
+    "subCategories": [
+      "Anniversary",
+      "Birthday",
+      "Charity",
+      "Christmas",
+      "Just for fun",
+      "Travel",
+      "Wedding"
+    ]
+  },
+  {
+    "name": "Health",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "local_hospital",
+    "subCategories": [
+      "Dental",
+      "Hospital",
+      "Insurance",
+      "Medications",
+      "Vision"
+    ]
+  },
+  {
+    "name": "Housing",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "home",
+    "subCategories": [
+      "Mortgage",
+      "Property Tax",
+      "Rent"
+    ]
+  },
+  {
+    "name": "Household",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "build",
+    "subCategories": [
+      "Decorating",
+      "Furniture",
+      "Maintenance",
+      "Supplies",
+      "Tools"
+    ]
+  },
+  {
+    "name": "Hobby",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "favorite"
+  },
+  {
+    "name": "Party",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "star"
+  },
+  {
+    "name": "Personal",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "person",
+    "subCategories": [
+      "Beauty",
+      "Cosmetics",
+      "Hairdressing",
+      "Personal Hygiene"
+    ]
+  },
+  {
+    "name": "Sports",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "fitness_center",
+    "subCategories": [
+      "Climbing",
+      "Equipment",
+      "Gym",
+      "Swimming Pool"
+    ]
+  },
+  {
+    "name": "Transport",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "commute",
+    "subCategories": [
+      "Bike",
+      "Bus",
+      "Parking",
+      "Taxi",
+      "Train",
+      "Underground"
+    ]
+  },
+  {
+    "name": "Travel",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "flight",
+    "subCategories": [
+      "Bus",
+      "Car Rent",
+      "Flight",
+      "Hotel",
+      "Train"
+    ]
+  },
+  {
+    "name": "Utilities",
+    "isExpense": "true",
+    "color": "",
+    "iconId": "wb_incandescent",
+    "subCategories": [
+      "Electricity",
+      "Garbage",
+      "Gas",
+      "Heating",
+      "Internet",
+      "Phones",
+      "TV",
+      "Water"
+    ]
+  },
+
+  {
+    "name": "Salary",
+    "isExpense": "false",
+    "color": "",
+    "iconId": "work"
+  },
+  {
+    "name": "Stock",
+    "isExpense": "false",
+    "color": "",
+    "iconId": "show_chart"
+  },
+  {
+    "name": "Allowance",
+    "isExpense": "false",
+    "color": "",
+    "iconId": "card_giftcard"
+  },
+  {
+    "name": "Savings",
+    "isExpense": "false",
+    "color": "",
+    "iconId": "attach_money"
+  },
+  {
+    "name": "General",
+    "isExpense": "false",
+    "color": "",
+    "iconId": "star"
+  },
+  {
+    "name": "Bonus",
+    "isExpense": "false",
+    "color": "",
+    "iconId": "add_box"
+  },
+  {
+    "name": "Gift",
+    "isExpense": "false",
+    "color": "",
+    "iconId": "favorite"
+  }
+]
