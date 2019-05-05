@@ -72,3 +72,11 @@ functions:
           method: delete
           cors: true
           authorizer: aws_iam
+  category-init:
+    handler: functions/category/init.main
+    events:
+      - http:
+          path: categories/init
+          method: get
+          cors: true
+          authorizer: aws_iam
