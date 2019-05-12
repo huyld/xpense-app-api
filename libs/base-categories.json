@@ -2,12 +2,11 @@
   {
     "name": "General",
     "isExpense": "true",
-    "color": "star"
+    "icon": "star"
   },
   {
     "name": "Car",
     "isExpense": "true",
-    "color": "",
     "iconId": "directions_car",
     "subCategories": [
       "Fuel",
@@ -20,7 +19,6 @@
   {
     "name": "Clothing",
     "isExpense": "true",
-    "color": "",
     "iconId": "star",
     "subCategories": [
       "Accessories",
@@ -33,7 +31,6 @@
   {
     "name": "Drinks",
     "isExpense": "true",
-    "color": "",
     "iconId": "local_bar",
     "subCategories": [
       "Alcohol",
@@ -47,7 +44,6 @@
   {
     "name": "Education",
     "isExpense": "true",
-    "color": "",
     "iconId": "school",
     "subCategories": [
       "Books",
@@ -58,7 +54,6 @@
   {
     "name": "Entertainment",
     "isExpense": "true",
-    "color": "",
     "iconId": "videogame_asset",
     "subCategories": [
       "Games",
@@ -72,7 +67,6 @@
   {
     "name": "Finance",
     "isExpense": "true",
-    "color": "",
     "iconId": "attach_money",
     "subCategories": [
       "Banking",
@@ -88,7 +82,6 @@
   {
     "name": "Food",
     "isExpense": "true",
-    "color": "",
     "iconId": "restaurant",
     "subCategories": [
       "Breakfast",
@@ -102,7 +95,6 @@
   {
     "name": "Gifts",
     "isExpense": "true",
-    "color": "",
     "iconId": "card_giftcard",
     "subCategories": [
       "Anniversary",
@@ -117,7 +109,6 @@
   {
     "name": "Health",
     "isExpense": "true",
-    "color": "",
     "iconId": "local_hospital",
     "subCategories": [
       "Dental",
@@ -130,7 +121,6 @@
   {
     "name": "Housing",
     "isExpense": "true",
-    "color": "",
     "iconId": "home",
     "subCategories": [
       "Mortgage",
@@ -141,7 +131,6 @@
   {
     "name": "Household",
     "isExpense": "true",
-    "color": "",
     "iconId": "build",
     "subCategories": [
       "Decorating",
@@ -154,19 +143,16 @@
   {
     "name": "Hobby",
     "isExpense": "true",
-    "color": "",
     "iconId": "favorite"
   },
   {
     "name": "Party",
     "isExpense": "true",
-    "color": "",
     "iconId": "star"
   },
   {
     "name": "Personal",
     "isExpense": "true",
-    "color": "",
     "iconId": "person",
     "subCategories": [
       "Beauty",
@@ -178,7 +164,6 @@
   {
     "name": "Sports",
     "isExpense": "true",
-    "color": "",
     "iconId": "fitness_center",
     "subCategories": [
       "Climbing",
@@ -190,7 +175,6 @@
   {
     "name": "Transport",
     "isExpense": "true",
-    "color": "",
     "iconId": "commute",
     "subCategories": [
       "Bike",
@@ -204,7 +188,6 @@
   {
     "name": "Travel",
     "isExpense": "true",
-    "color": "",
     "iconId": "flight",
     "subCategories": [
       "Bus",
@@ -217,7 +200,6 @@
   {
     "name": "Utilities",
     "isExpense": "true",
-    "color": "",
     "iconId": "wb_incandescent",
     "subCategories": [
       "Electricity",
@@ -234,43 +216,36 @@
   {
     "name": "Salary",
     "isExpense": "false",
-    "color": "",
     "iconId": "work"
   },
   {
     "name": "Stock",
     "isExpense": "false",
-    "color": "",
     "iconId": "show_chart"
   },
   {
     "name": "Allowance",
     "isExpense": "false",
-    "color": "",
     "iconId": "card_giftcard"
   },
   {
     "name": "Savings",
     "isExpense": "false",
-    "color": "",
     "iconId": "attach_money"
   },
   {
     "name": "General",
     "isExpense": "false",
-    "color": "",
     "iconId": "star"
   },
   {
     "name": "Bonus",
     "isExpense": "false",
-    "color": "",
     "iconId": "add_box"
   },
   {
     "name": "Gift",
     "isExpense": "false",
-    "color": "",
     "iconId": "favorite"
   }
 ]
