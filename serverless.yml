@@ -80,3 +80,11 @@ functions:
           method: get
           cors: true
           authorizer: aws_iam
+  category-list:
+    handler: functions/category/list.main
+    events:
+      - http:
+          path: categories
+          method: get
+          cors: true
+          authorizer: aws_iam
