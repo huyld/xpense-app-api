@@ -1,4 +1,5 @@
 import * as dynamoDbLib from 'libs/dynamodb-lib';
+import { getUserPoolUserId } from 'libs/utils';
 import { success, failure } from 'libs/response-lib';
 
 /**
@@ -18,7 +19,7 @@ export async function main(event, context, callback) {
     TableName: 'accounts',
     Item: {
       ...data,
-      userId: event.requestContext.identity.cognitoIdentityId,
+      userId: getUserPoolUserId(event.requestContext),
       accountId: `${data.currency}_${dynamoDbLib.randomString()}`,
       accountName: data.accountName,
       initialBalance: data.initialBalance,

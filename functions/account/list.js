@@ -1,4 +1,5 @@
 import * as dynamoDbLib from 'libs/dynamodb-lib';
+import { getUserPoolUserId } from 'libs/utils';
 import { success, failure } from 'libs/response-lib';
 
 /**
@@ -28,7 +29,7 @@ export async function main(event, context, callback) {
     TableName: 'accounts',
     KeyConditionExpression: `userId = :userId ${conditionClause}`,
     ExpressionAttributeValues: {
-      ':userId': event.requestContext.identity.cognitoIdentityId,
+      ':userId': getUserPoolUserId(event.requestContext),
       ...conditionExpression
     }
   };

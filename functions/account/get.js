@@ -1,4 +1,5 @@
 import * as dynamoDbLib from 'libs/dynamodb-lib';
+import { getUserPoolUserId } from 'libs/utils';
 import { success, failure } from 'libs/response-lib';
 
 /**
@@ -15,7 +16,7 @@ export async function main(event, context) {
   const params = {
     TableName: 'accounts',
     Key: {
-      userId: event.requestContext.identity.cognitoIdentityId,
+      userId: getUserPoolUserId(event.requestContext),
       accountId: event.pathParameters.id
     }
   };
