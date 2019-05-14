@@ -36,7 +36,7 @@ export async function main(event, context, callback) {
 
         sub['categoryId'] = subId;
         sub['userId'] = `${userName}_${subId}`;
-        sub['isExpense'] = category.isExpense;
+        sub['isExpense'] = category.isExpense === 'true' ? true : false;
         sub['categoryName'] = subName;
 
         return sub;
@@ -53,7 +53,7 @@ export async function main(event, context, callback) {
           userId: category.userId,
           categoryId: category.categoryId,
           categoryName: category.name || '',
-          isExpense: category.isExpense,
+          isExpense: category.isExpense === 'true' ? true : false,
           iconId: category.iconId ? category.iconId : 'default',
           subCategories: category.subCategories,
           ...isDefault,
