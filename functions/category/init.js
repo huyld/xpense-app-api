@@ -46,6 +46,7 @@ export async function main(event, context, callback) {
   });
 
   let requestBatch = customizedCategories.map(category => {
+    let isDefault = !!category.isDefault ? { isDefault: true } : {};
     return {
       PutRequest: {
         Item: {
@@ -55,6 +56,7 @@ export async function main(event, context, callback) {
           isExpense: category.isExpense,
           iconId: category.iconId ? category.iconId : 'default',
           subCategories: category.subCategories,
+          ...isDefault,
         }
       }
     };

@@ -2,7 +2,8 @@
   {
     "name": "General",
     "isExpense": "true",
-    "icon": "star"
+    "iconId": "star",
+    "isDefault": "true"
   },
   {
     "name": "Car",
@@ -236,7 +237,8 @@
   {
     "name": "General",
     "isExpense": "false",
-    "iconId": "star"
+    "iconId": "star",
+    "isDefault": "true"
   },
   {
     "name": "Bonus",
