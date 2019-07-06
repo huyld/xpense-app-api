@@ -38,6 +38,7 @@ export async function main(event, context, callback) {
         sub['userId'] = `${userName}_${subId}`;
         sub['isExpense'] = category.isExpense === 'true' ? true : false;
         sub['categoryName'] = subName;
+	sub['createdDate'] = Date.now();
 
         return sub;
       });
