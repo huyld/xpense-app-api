@@ -35,10 +35,8 @@ export async function main(event, context, callback) {
         let sub = {};
 
         sub['categoryId'] = subId;
-        sub['userId'] = `${userName}_${subId}`;
-        sub['isExpense'] = category.isExpense === 'true' ? true : false;
         sub['categoryName'] = subName;
-	sub['createdDate'] = Date.now();
+        sub['createdDate'] = Date.now();
 
         return sub;
       });
