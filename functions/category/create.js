@@ -18,8 +18,6 @@ export async function main(event, context, callback) {
   let subList = data.subCategories;
   let subCategories = subList.map(sub => {
     sub.categoryId = categoryId + '_' + dynamoDbLib.randomString();
-    sub.userId = getUserPoolUserId(event.requestContext);
-    sub.isExpense = data.isExpense ? data.isExpense : true;
     sub.createdDate = Date.now();
     return sub;
   });
