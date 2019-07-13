@@ -88,3 +88,12 @@ functions:
           method: get
           cors: true
           authorizer: aws_iam
+  category-create:
+    handler: functions/category/create.main
+    events:
+      - http:
+          path: category
+          method: post
+          cors: true
+          authorizer: aws_iam
+
