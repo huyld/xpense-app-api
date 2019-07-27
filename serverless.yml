@@ -96,4 +96,11 @@ functions:
           method: post
           cors: true
           authorizer: aws_iam
-
+  category-get:
+    handler: functions/category/get.main
+    events:
+      - http:
+          path: categories/{id}
+          method: get
+          cors: true
+          authorizer: aws_iam
