@@ -13,7 +13,7 @@ import { success, failure } from 'libs/response-lib';
 export async function main(event, context) {
   const data = JSON.parse(event.body);
 
-  console.log('Update category data', data);
+  // TODO: Remove transactions that belong to removed sub-categories
 
   const params = {
     TableName: 'categories',
