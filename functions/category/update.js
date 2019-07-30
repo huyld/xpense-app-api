@@ -3,7 +3,7 @@ import { getUserPoolUserId } from 'libs/utils';
 import { success, failure } from 'libs/response-lib';
 
 /**
- * Update account
+ * Update category
  *
  * @export
  * @param {*} event
@@ -13,20 +13,28 @@ import { success, failure } from 'libs/response-lib';
 export async function main(event, context) {
   const data = JSON.parse(event.body);
 
-  console.log('Update account data', data);
+  // TODO: Remove transactions that belong to removed sub-categories
 
   const params = {
-    TableName: 'accounts',
+    TableName: 'categories',
     Key: {
       userId: getUserPoolUserId(event.requestContext),
-      accountId: event.pathParameters.id
+      categoryId: event.pathParameters.id
     },
     UpdateExpression:
-      'SET accountName = :accountName, initialBalance = :initialBalance, color = :color',
+      `SET
+        categoryName = :categoryName,
+        isExpense = :isExpense,
+        iconId = :iconId,
+        subCategories= :subCategories,
+        lastModified = :lastModified
+    `,
     ExpressionAttributeValues: {
-      ':accountName': data.accountName || '',
-      ':initialBalance': data.initialBalance || 0,
-      ':color': data.color || null
+      ':categoryName': data.categoryName || '',
+      ':isExpense': data.isExpense || true,
+      ':iconId': data.iconId || '',
+      ':subCategories': data.subCategories,
+      ':lastModified': Date.now(),
     },
     ReturnValues: 'ALL_NEW'
   };
@@ -38,7 +46,7 @@ export async function main(event, context) {
       data: result,
     });
   } catch (e) {
-    console.error('Update account exception', e);
+    console.error('Update Category exception', e);
     return failure({
       status: false,
       data: e,

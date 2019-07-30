@@ -3,7 +3,7 @@ import { getUserPoolUserId } from 'libs/utils';
 import { success, failure } from 'libs/response-lib';
 
 /**
- * Delete account
+ * Delete category
  *
  * @export
  * @param {*} event
@@ -11,13 +11,12 @@ import { success, failure } from 'libs/response-lib';
  * @returns
  */
 export async function main(event, context) {
-  console.log('Delete account pathParameters', event.pathParameters);
 
   const params = {
-    TableName: 'accounts',
+    TableName: 'categories',
     Key: {
       userId: getUserPoolUserId(event.requestContext),
-      accountId: event.pathParameters.id
+      categoryId: event.pathParameters.id
     }
   };
 
@@ -30,9 +29,11 @@ export async function main(event, context) {
       data: result,
     });
   } catch (e) {
+    console.error('Delete category error', e);
     return failure({
       status: false,
-      data: result,
+      data: e,
     });
   }
 }
+

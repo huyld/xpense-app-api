@@ -3,7 +3,7 @@ import { getUserPoolUserId } from 'libs/utils';
 import { success, failure } from 'libs/response-lib';
 
 /**
- * Get detail of a single account by account ID
+ * Get detail of a single category by category ID
  *
  * @export
  * @param {*} event
@@ -11,13 +11,13 @@ import { success, failure } from 'libs/response-lib';
  * @returns
  */
 export async function main(event, context) {
-  console.log('Get accounts pathParameters', event.pathParameters);
+  console.log('Get category pathParameters', event.pathParameters);
 
   const params = {
-    TableName: 'accounts',
+    TableName: 'categories',
     Key: {
       userId: getUserPoolUserId(event.requestContext),
-      accountId: event.pathParameters.id
+      categoryId: event.pathParameters.id
     }
   };
 
@@ -30,6 +30,7 @@ export async function main(event, context) {
       return failure({ status: false, error: 'Item not found.' });
     }
   } catch (e) {
+    console.log('Exception', e);
     return failure({ status: false });
   }
 }
